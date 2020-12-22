@@ -1,2 +1,2 @@
-# Three-Pac
+# Triple-Pac
 Computing Project: Three Pac(k) - An arcade game inspired by Pac-Man
