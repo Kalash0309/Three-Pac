@@ -31,7 +31,7 @@ def write_text(text, scr, pos, fsize, fcol, fname, center=True):
 ################################################## MENU SCREEN #########################################################
 
 def menu_scr():
-    global next_scr
+
     menuImg_x = (window_width * 0.45)
     menuImg_y = (window_height * 0.30)
     change_menu_x = 5
@@ -75,7 +75,7 @@ def menu_scr():
 ############################################### T&J INTRO SCREEN #######################################################
 
 def t1_scr():
-    global next_scr
+
     end = False
     while not end:
 
@@ -102,7 +102,7 @@ def t1_scr():
 ############################################ CHIRSTMAS INTRO SCREEN ####################################################
 
 def t2_scr():
-    global next_scr
+
     end = False
     while not end:
 
@@ -129,7 +129,7 @@ def t2_scr():
 ############################################ HALLOWEEN INTRO SCREEN ####################################################
 
 def t3_scr():
-    global next_scr
+
     end = False
     while not end:
 
@@ -385,7 +385,7 @@ def tomjerry_ghosts_3():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(8)
+        clock.tick(10)
 
 ############################################ T&J 4GHOST PLAY SCREEN ####################################################
 
@@ -631,7 +631,7 @@ def tomjerry_ghosts_4():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(60)
+        clock.tick(10)
 
 ######################################### CHRISTMAS 3GHOST PLAY SCREEN #################################################
 
@@ -863,7 +863,7 @@ def christmas_ghosts_3():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(8)
+        clock.tick(10)
 
 ######################################### CHRISTMAS 4GHOST PLAY SCREEN #################################################
 
@@ -1109,7 +1109,7 @@ def christmas_ghosts_4():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(8)
+        clock.tick(10)
 
 ######################################### HALLOWEEN 3GHOST PLAY SCREEN #################################################
 
@@ -1341,7 +1341,7 @@ def halloween_ghosts_3():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(8)
+        clock.tick(10)
 
 ######################################### HALLOWEEN 4GHOST PLAY SCREEN #################################################
 
@@ -1586,7 +1586,7 @@ def halloween_ghosts_4():
         score = calculate_score(score, player_x, player_y)
         print_score(score)
         pygame.display.update()
-        clock.tick(8)
+        clock.tick(10)
 
 
 ################################################## MAIN BODY ###########################################################
