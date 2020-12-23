@@ -65,12 +65,9 @@ def menu_scr():
         write_text("TRIPLE PAC(K)", game_disp, [window_width // 2, window_height // 6], 72, white, 'Sunday Morning.ttf')
         write_text("Tom & Jerry (PRESS 1)", game_disp, [window_width // 2, window_height // 2], 54, white, 'Bright Orchid.ttf')
         write_text("Christmas (PRESS 2)", game_disp, [window_width // 2, window_height // 2 + 70], 54, black, 'Bright Orchid.ttf')
-        write_text("Halloween (PRESS 3)", game_disp, [window_width // 2, window_height // 2 + 140], 54, white,
-                   'Bright Orchid.ttf')
-        write_text("How to Play ?", game_disp, [window_width // 2, window_height // 2 + 210], 48, black,
-                   'Bright Orchid.ttf')
-        write_text("Developed by Kalash Kankaria, Kushagra Jain and Mann Jain", game_disp, [0, window_height - 20],
-                   25, black, 'Almond Nougat.ttf', False)
+        write_text("Halloween (PRESS 3)", game_disp, [window_width // 2, window_height // 2 + 140], 54, white, 'Bright Orchid.ttf')
+        write_text("How to Play ?", game_disp, [window_width // 2, window_height // 2 + 210], 48, black, 'Bright Orchid.ttf')
+        write_text("Developed by Kalash Kankaria, Kushagra Jain and Mann Jain", game_disp, [0, window_height - 40], 25, black, 'Almond Nougat.ttf', False)
         pygame.display.update()
         clock.tick(30)
     return next_scr
@@ -95,8 +92,7 @@ def t1_scr():
                     end = True
 
         game_disp.fill(grey)
-        write_text("Tom & Jerry", game_disp, [window_width // 2, window_height // 6], 70, navy_blue,
-                   'Sunday Morning.ttf')
+        write_text("Tom & Jerry", game_disp, [window_width // 2, window_height // 6], 70, navy_blue, 'Sunday Morning.ttf')
         write_text("3 Ghosts (PRESS 1)", game_disp, [window_width // 2, window_height // 2], 54, black, 'Bright Orchid.ttf')
         write_text("4 Ghosts (PRESS 2)", game_disp, [window_width // 2, window_height // 2 + 140], 54, black, 'Bright Orchid.ttf')
         pygame.display.update()
@@ -830,8 +826,22 @@ def christmas_ghosts_3():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
             for event in pygame.event.get():
@@ -1052,11 +1062,33 @@ def christmas_ghosts_4():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
 
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
+        if kill(ghost4_x, ghost4_y, player_x, player_y):
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, white, 'Sunday Morning.ttf')
             for event in pygame.event.get():
 
                 if event.type == pygame.QUIT:
@@ -1272,8 +1304,22 @@ def halloween_ghosts_3():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
             for event in pygame.event.get():
@@ -1494,9 +1540,32 @@ def halloween_ghosts_4():
         player_y += change_y
         if kill(ghost1_x, ghost1_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost2_x, ghost2_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
         if kill(ghost3_x, ghost3_y, player_x, player_y):
+            write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
+            for event in pygame.event.get():
+
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            change_x = 0
+            change_y = 0
+        if kill(ghost4_x, ghost4_y, player_x, player_y):
             write_text("GAME OVER", game_disp, [window_width // 2, window_height // 2], 90, red, 'Sunday Morning.ttf')
             for event in pygame.event.get():
 
